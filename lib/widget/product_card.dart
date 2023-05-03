@@ -20,7 +20,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(8)),
       child: Column(children: [
@@ -99,7 +99,7 @@ class ProductCard extends StatelessWidget {
         Text(
           '\$$price',
           style: const TextStyle(
-              fontFamily: 'Inter', fontSize: 22, fontWeight: FontWeight.w700),
+              fontFamily: 'Inter', fontSize: 20, fontWeight: FontWeight.w700),
         )
       ]),
     );

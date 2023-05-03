@@ -12,7 +12,7 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 5.0),
+      // padding: const EdgeInsets.symmetric(horizontal: 5.0),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [

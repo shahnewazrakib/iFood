@@ -44,27 +44,23 @@ class _HomeState extends State<Home> {
                   height: 20.0,
                 ),
                 Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0),
-                  child: GridView.builder(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 20.0,
-                            mainAxisSpacing: 20.0,
-                            mainAxisExtent: 250),
-                    itemCount: products.length,
-                    itemBuilder: (context, index) {
-                      return ProductCard(
-                        image: products[index].image,
-                        name: products[index].name,
-                        deliveryTime: products[index].deliveryTime,
-                        rating: products[index].rating,
-                        price: products[index].price,
-                        isFav: products[index].isFav,
-                      );
-                    },
-                  ),
+                    child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 15.0,
+                      mainAxisSpacing: 15.0,
+                      mainAxisExtent: 240),
+                  itemCount: products.length,
+                  itemBuilder: (context, index) {
+                    return ProductCard(
+                      image: products[index].image,
+                      name: products[index].name,
+                      deliveryTime: products[index].deliveryTime,
+                      rating: products[index].rating,
+                      price: products[index].price,
+                      isFav: products[index].isFav,
+                    );
+                  },
                 ))
               ],
             ),

@@ -12,7 +12,7 @@ class HomeHeroArea extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(
-          height: 10,
+          height: 5,
         ),
         Text(
           "Find good",
@@ -73,7 +73,7 @@ class HomeHeroArea extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            print('object');
+            Navigator.pushNamed(context, '/map');
           },
           child: Row(
             children: const [
