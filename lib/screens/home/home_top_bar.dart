@@ -27,23 +27,28 @@ class TopBar extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     fontSize: 15),
               )),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.2),
-                  spreadRadius: 1,
-                  blurRadius: 5,
-                  offset: const Offset(0, 4),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/cart');
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: const CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.shopping_bag_outlined,
+                  color: Colors.amber,
                 ),
-              ],
-            ),
-            child: const CircleAvatar(
-              backgroundColor: Colors.white,
-              child: Icon(
-                Icons.shopping_bag_outlined,
-                color: Colors.amber,
               ),
             ),
           )
