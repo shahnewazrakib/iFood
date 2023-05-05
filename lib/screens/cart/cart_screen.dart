@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:ifood/screens/cart/cart_product.dart";
 import "package:ifood/screens/cart/cart_top_bar.dart";
 import "package:ifood/models/product_modal.dart";
+import "package:ifood/screens/cart/cart_total.dart";
 
 class Cart extends StatelessWidget {
   const Cart({super.key});
@@ -43,7 +44,8 @@ class Cart extends StatelessWidget {
                 );
               },
             ),
-          )
+          ),
+          CartTotal()
         ]),
       )),
     );
