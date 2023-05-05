@@ -1,3 +1,3 @@
 # ifood
 
-A new Flutter project.
+Food delivery app UI 
