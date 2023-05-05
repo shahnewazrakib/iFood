@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CartTotal extends StatelessWidget {
-  // CartTotal({super.key});
+  CartTotal({super.key});
 
   final TextStyle textStyle = TextStyle(
       fontFamily: 'Inter', fontSize: 15.0, color: Colors.grey.shade500);
@@ -78,7 +78,7 @@ class CartTotal extends StatelessWidget {
         ElevatedButton(
             style: ElevatedButton.styleFrom(
                 elevation: 0,
-                backgroundColor: Color.fromARGB(255, 255, 207, 49),
+                backgroundColor: const Color.fromARGB(255, 255, 207, 49),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(100)),
                 padding: const EdgeInsets.symmetric(vertical: 10.0)),

@@ -52,13 +52,18 @@ class _HomeState extends State<Home> {
                       mainAxisExtent: 240),
                   itemCount: products.length,
                   itemBuilder: (context, index) {
-                    return ProductCard(
-                      image: products[index].image,
-                      name: products[index].name,
-                      deliveryTime: products[index].deliveryTime,
-                      rating: products[index].rating,
-                      price: products[index].price,
-                      isFav: products[index].isFav,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/product-detail', arguments: {'product': products[index]});
+                      },
+                      child: ProductCard(
+                        image: products[index].image,
+                        name: products[index].name,
+                        deliveryTime: products[index].deliveryTime,
+                        rating: products[index].rating,
+                        price: products[index].price,
+                        isFav: products[index].isFav,
+                      ),
                     );
                   },
                 ))

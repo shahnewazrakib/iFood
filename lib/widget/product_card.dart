@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
             Icon(
               isFav ?? false ? Icons.favorite : Icons.favorite_border,
               size: 20,
-              color: isFav ?? false ? Colors.red.shade400 : Colors.grey,
+              color: isFav ?? false ? Colors.red : Colors.grey,
             ),
           ],
         ),
