@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:ifood/screens/product-detail/product_about.dart";
+import "package:ifood/screens/product-detail/product_ingedrient.dart";
 
 class ProductOverview extends StatefulWidget {
   final String? name;
@@ -36,7 +38,7 @@ class _ProductOverviewState extends State<ProductOverview> {
               Expanded(
                   child: Container(
                 decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: Color(0xFFF8F8F8),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(50),
                         topRight: Radius.circular(50))),
@@ -52,8 +54,8 @@ class _ProductOverviewState extends State<ProductOverview> {
           ]),
         ),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          decoration: const BoxDecoration(color: Colors.white),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          decoration: const BoxDecoration(color: Color(0xFFF8F8F8)),
           child: Column(children: [
             const SizedBox(
               height: 10.0,
@@ -120,7 +122,7 @@ class _ProductOverviewState extends State<ProductOverview> {
             ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 20),
-              width: 200,
+              width: 220,
               height: 42,
               decoration: BoxDecoration(
                   color: Colors.grey.shade200,
@@ -132,7 +134,7 @@ class _ProductOverviewState extends State<ProductOverview> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 15.0),
                       child: Text(
-                        '\$${widget.price! * quantity!}',
+                        '\$${(widget.price! * quantity!).toStringAsFixed(2)}',
                         style: const TextStyle(
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w500,
@@ -189,7 +191,36 @@ class _ProductOverviewState extends State<ProductOverview> {
                       ),
                     ),
                   ]),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'Ingredients',
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    height: 100,
+                    child: ProductIngedrient(),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const ProductAbout()
+                ],
+              ),
+            ),
           ]),
         )
       ],

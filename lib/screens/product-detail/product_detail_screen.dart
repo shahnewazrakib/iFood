@@ -30,23 +30,35 @@ class _ProductDetailState extends State<ProductDetail> {
       isFav = args['product']?.isFav;
     }
     return Scaffold(
-        body: Container(
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/background.jpg'), fit: BoxFit.cover)),
-      child: SafeArea(
-          child: Column(children: [
-        ProductDetailTopBar(
-          isFav: isFav,
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/background.jpg'),
+                  fit: BoxFit.cover)),
+          child: SafeArea(
+              child: Column(children: [
+            ProductDetailTopBar(
+              isFav: isFav,
+            ),
+            ProductOverview(
+              name: name,
+              image: image,
+              deliveryTime: deliveryTime,
+              rating: rating,
+              price: price,
+            )
+          ])),
         ),
-        ProductOverview(
-          name: name,
-          image: image,
-          deliveryTime: deliveryTime,
-          rating: rating,
-          price: price,
-        )
-      ])),
-    ));
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.amber,
+        onPressed: () {},
+        child: Icon(
+          Icons.shopping_bag_outlined,
+          color: Colors.grey.shade900,
+        ),
+      ),
+    );
   }
 }
